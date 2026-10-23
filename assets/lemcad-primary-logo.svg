@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="220" viewBox="0 0 960 220" role="img" aria-labelledby="t d">
+<title id="t">LemCAD</title><desc id="d">Angled coral and midnight monogram with bold slanted LemCAD wordmark, selected logo direction</desc>
+<g transform="translate(27 30)">
+<path d="M68 17 0 151h148l31-35H63L111 17Z" fill="#EF634F"/>
+<path d="M122 17 70 113h112l31-35h-86l34-61Z" fill="#17212B"/>
+</g>
+<g font-family="Arial Black,Arial,Helvetica,sans-serif" font-weight="900" font-style="italic" letter-spacing="-3">
+<text x="270" y="157" fill="#17212B" font-size="115">Lem</text>
+<text x="526" y="157" fill="#EF634F" font-size="115">CAD</text>
+</g></svg>
