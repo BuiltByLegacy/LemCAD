@@ -1,6 +1,6 @@
 <div align="center">
 
-![LemCAD interim brand wordmark](assets/lemcad-brand-placeholder.svg)
+![LemCAD interim brand wordmark](assets/lemcad-primary-logo.svg)
 
 # LemCAD
 
@@ -126,7 +126,7 @@ The public repository contains **release documentation and owner-approved distri
 
 ## Branding
 
-The current README banner is an **interim identity**, using the approved **Precision Coral** (`#EF634F`) and **Midnight Navy** (`#17212B`) brand direction. The final LemCAD logo and naming clearance have **not** been signed off. Final branding may replace this graphic.
+The current README banner uses the **approved Option 2 visual direction**, using the approved **Precision Coral** (`#EF634F`) and **Midnight Navy** (`#17212B`) brand direction. The name still requires legal clearance before major commercial launch; SVG rendering and Windows small-icon assets should be reviewed before shipping.
 
 ---
 
