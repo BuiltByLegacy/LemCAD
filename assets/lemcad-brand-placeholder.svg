@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
+<title id="title">LemCAD</title><desc id="desc">Interim geometric L monogram in Precision Coral with LemCAD wordmark</desc>
+<rect width="720" height="180" rx="20" fill="#17212B"/>
+<g transform="translate(32 30)">
+<path d="M20 6V106H120" fill="none" stroke="#EF634F" stroke-width="23" stroke-linecap="square" stroke-linejoin="miter"/>
+<path d="M52 6V74H120" fill="none" stroke="#FFFFFF" stroke-opacity=".75" stroke-width="4"/>
+<circle cx="120" cy="106" r="6" fill="#EF634F"/>
+</g>
+<text x="196" y="116" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="78" font-weight="700" letter-spacing="1">Lem<tspan fill="#EF634F">CAD</tspan></text>
+</svg>
