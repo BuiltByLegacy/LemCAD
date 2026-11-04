@@ -1,139 +1,88 @@
 <div align="center">
 
-![LemCAD interim brand wordmark](assets/lemcad-primary-logo.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/lemcad-logo-on-dark.svg">
+  <img alt="LemCAD by Lemery Designs" src="assets/lemcad-logo.svg" width="520">
+</picture>
 
-# LemCAD
+**Professional parametric CAD, redesigned for people who build things.**
 
-**Professional CAD, redesigned for people who build things.**
-
-**Precise modeling. Thoughtful workflows. Built for real engineering.**
-
-[Website](https://lemerydesigns.com/lemcad) · [Windows downloads](https://lemerydesigns.com/lemcad/download) · [Public releases](https://github.com/BuiltByLegacy/LemCAD/releases)
+[Download for Windows](https://lemerydesigns.com/lemcad) · [Releases](https://github.com/BuiltByLegacy/LemCAD/releases) · [Lemery Designs](https://lemerydesigns.com)
 
 </div>
 
-> **EARLY DEVELOPMENT · No approved public installer yet.** A Windows installer candidate has passed an automated GitHub Actions run in the private development repository, but independent installation and CAD-workflow qualification remain release gates. The links above will offer an installer when the owner explicitly publishes a verified stable release.
+> **Early preview.** LemCAD is in active development. The current Windows release is a preview, not a production-qualified CAD system. Check exported geometry in qualified software before using it for manufacturing.
 
 ## What is LemCAD?
 
-LemCAD is an independent, Windows-focused parametric 3D CAD application in development by **BuiltByLegacy / Lemery Designs**. It aims to make serious mechanical design feel clear, approachable and responsive while retaining editable model history and engineering accuracy.
+LemCAD is a Windows desktop parametric 3D CAD application from **Lemery Designs**. It aims to make serious mechanical design feel clear and approachable while keeping an editable feature history and engineering accuracy. Reliable geometry and file handling come before feature count.
 
-Our direction is a modern light/dark desktop modeling workspace with a feature navigator, contextual sketch tools, floating command dialogs and predictable selection/edit behavior. **Reliable geometry and file handling come before feature count.** LemCAD is not affiliated with or endorsed by Siemens, PTC, Autodesk or Dassault Systèmes.
+LemCAD is not affiliated with or endorsed by Siemens, PTC, Autodesk or Dassault Systèmes.
 
-## What works today, and what is planned?
+## What you can do in the current preview
 
-The private codebase includes a functional **prototype**, not a qualified public product.
-
-| Area | Current status |
+| Area | What works |
 | --- | --- |
-| Windows desktop GUI, 3D viewport and Part Navigator | Prototype |
-| Sketch, basic feature modeling and Extrude | Prototype; undergoing workflow validation |
-| Editable history, selected feature commands and undo | Early implementation / tests continuing |
-| Prototype project save and reopen | Available in development; not production-qualified |
-| STEP/STL export paths | In development; independently verify geometry |
-| Windows installer and desktop shortcut | Candidate build pipeline; clean-machine validation required |
-| Light/dark workspace and polished floating dialogs | Design approved; implementation in progress |
-| In-app bug/suggestion reporting | Local prototype; sending and recording not yet released |
-| In-app update prompt, release notes and relaunch | Planned, not active |
-| Assembly depth, drawings, GD&T/PMI, simulation, CAM and optional AI | Roadmap; not promised for current builds |
+| Sketching | Lines, arcs, rectangles, circles and points on datum planes or flat faces; automatic horizontal/vertical constraints; dimensions; snapping to the sketch origin and existing points |
+| Features | Extrude, Revolve, Hole, Edge Blend and Pattern, with live preview |
+| Editing | Part Navigator with double-click to edit, suppress, roll back, rename and delete; undo and redo |
+| Files | Save and reopen LemCAD part files (`.lcad`) |
+| Export | STEP and STL |
+| Navigation | Mouse (middle button) and laptop touchpad controls, below |
 
-**Engineering safety:** Do not rely on this prototype as the sole record for released production designs, regulated/safety-critical geometry, or customer manufacturing deliverables. Validate exported geometry in qualified software.
+Assemblies, drawings, GD&T/PMI, simulation and CAM are on the roadmap and are not in current builds.
 
-## Install LemCAD on Windows
+## Install on Windows
 
-**When an approved installer is available:**
+1. Go to **[lemerydesigns.com/lemcad](https://lemerydesigns.com/lemcad)** and choose **Download for Windows**. It always gives you the newest stable release from this repository.
+2. Run `LemCAD-Setup-x64-<version>.exe`.
+3. The installer is not code-signed yet, so Windows may show **"Windows protected your PC"**. Choose **More info**, then **Run anyway**. Only do this for installers downloaded from the website or this repository's Releases page.
+4. Start LemCAD from the Start menu or the desktop shortcut.
 
-1. Visit **[lemerydesigns.com/lemcad](https://lemerydesigns.com/lemcad)**.
-2. Select **Download for Windows** to retrieve the latest approved stable installer from this repository's GitHub Releases. No GitHub account, Git checkout, Python or command prompt will be needed by end users.
-3. Run the versioned `LemCAD-Setup-x64-<version>.exe` (early candidates may retain the name `LemeryCAD-Setup-x64-<version>.exe`).
-4. Launch from the desktop shortcut or Windows Start menu.
+Each release includes `SHA256SUMS.txt`. To check your download, run this in PowerShell from your Downloads folder and compare the result:
 
-**At present, no public installer is published.** Only download from the official website or this repository's verified Releases page. An unsigned early build may trigger a Windows reputation warning; code signing is a planned public-release gate. Never turn off device security to install an untrusted build.
-
-## System requirements (provisional)
-
-Hardware targets have **not** yet been established by a full benchmark matrix. The current prototype targets **64-bit Windows with supported GPU/OpenGL drivers**.
-
-| Component | Early research target — not a verified minimum |
-| --- | --- |
-| OS | Windows 10/11 x64; final supported builds to be confirmed |
-| CPU | Modern 4-core or better |
-| RAM | 8 GB exploratory entry target; 16–32 GB preferred for testing |
-| Graphics | Working OpenGL-capable integrated/discrete GPU and current driver |
-| Storage | SSD recommended; final installer footprint under measurement |
-| Display | 1920 × 1080 recommended for current workspace |
-
-The future **System Advisor** is intended to check PC capabilities and recommend reversible viewport settings without changing geometry accuracy. These numbers are planning targets, **not compatibility guarantees**.
-
-## Version numbers and releases
-
-Every approved release will have an immutable version tag, named installer, checksum and human-readable release notes.
-
-| Version example | Meaning | Availability |
-| --- | --- | --- |
-| `v0.1.0` | Initial alpha milestone / current internal package version | **Not publicly released** |
-| `v0.1.1` | Compatible bug-fix release | Example only |
-| `v0.2.0` | Compatible feature release | Example only |
-| `v0.2.0-beta.1` | Test preview, intentionally excluded from stable downloads | Example only |
-| `v1.0.0` | Future major stable milestone | Not announced |
-
-- **Public releases require explicit owner approval.** Passing CI, pushing code, or creating a private installer does **not** publish a public release.
-- **Stable website downloads** select the latest approved published stable release, not alpha/beta previews.
-- **What's new** appears in the GitHub Release description, with highlights, fixes, known issues, and compatibility notes.
-- Planned **in-app update notifications** will present version changes and release notes before users choose **Update & Relaunch**. **The updater is not implemented yet.**
-- Each approved installer will include SHA-256 verification information. Production-wide distribution also requires signing and upgrade testing.
-
-### Release notes format
-
-```text
-LemCAD vX.Y.Z — YYYY-MM-DD
-Channel: Stable / Beta / Alpha
-Highlights:
-- ...
-Fixes:
-- ...
-Known issues:
-- ...
-Compatibility / migration notes:
-- ...
-Windows installer: LemCAD-Setup-x64-X.Y.Z.exe
-SHA-256: <published digest>
+```powershell
+(Get-FileHash .\LemCAD-Setup-x64-<version>.exe).Hash
 ```
 
-See the [Releases page](https://github.com/BuiltByLegacy/LemCAD/releases) for **actual shipped versions**. If it is empty, no public version has been released.
+To update, download and run the newest installer; it replaces the installed version and keeps your part files.
 
-## Product direction
+**Requirements:** 64-bit Windows 10 or 11 with a working OpenGL graphics driver. These are early targets, not a tested compatibility list.
 
-1. **Foundation** — sketch → solid → edit → save/reopen → export, repeatably tested.
-2. **Professional workspace** — polished contextual UI, navigators, selection, floating dialogs and dual themes.
-3. **Parametric depth** — more robust constraints, geometry regeneration, expressions and error recovery.
-4. **Engineering workflows** — assemblies, drawings, PMI/GD&T and manufacturability.
-5. **Extensibility** — optional manufacturing integrations and AI assistance **after** core CAD reliability.
+## Moving around the 3D view
 
-Roadmap items are goals, not contractual features or release-date promises.
+| With a mouse | With a laptop touchpad | Does |
+| --- | --- | --- |
+| Middle-button drag | Left-drag | Rotate around the point under the cursor |
+| Shift + middle-drag | Shift + left-drag | Pan |
+| Scroll wheel, or Ctrl + middle-drag | Two-finger scroll, pinch, or Ctrl + left-drag | Zoom |
+| Middle-button double-click | View → Fit | Fit the part in the view |
 
-## Support, bugs and suggestions
+A left click selects. In sketch mode the view stays flat on the sketch; rotating comes back when you choose **Finish**.
 
-Feedback tools are in development. Please do **not** post proprietary models, customer CAD files, sensitive screenshots, passwords, license information, or confidential engineering work in public GitHub issues.
+## Releases
 
-For general public questions, use the [Lemery Designs website](https://lemerydesigns.com/lemcad). An in-app **Feedback** flow is planned with opt-in, sanitized diagnostics and user-controlled attachments; continuous video recording and uploads are **not currently enabled**.
+See the [Releases page](https://github.com/BuiltByLegacy/LemCAD/releases) for every version, its release notes and checksums. The website download always points to the newest stable release; previews marked "Pre-release" are never offered there.
 
-## Privacy and security
+| Version | Highlights |
+| --- | --- |
+| **0.1.3** | Touchpad navigation: left-drag rotates, Shift pans, Ctrl zooms |
+| 0.1.2 | View framing after sketches and edits, exact origin snap, file dialogs open in your part's folder, Hole and Part Navigator fixes |
+| 0.1.1 | First working public preview |
+| 0.1.0 | Withdrawn: the installer could fail to start |
 
-LemCAD is being built around a **local-first** CAD workflow. A future update check may access approved public release metadata, but optional diagnostics and content sharing must require clear consent. CAD projects should never be silently uploaded as part of feedback or update checks.
+## Support and feedback
 
-The public repository contains **release documentation and owner-approved distributable binaries only**. Private source code, signing credentials, internal issue trackers, private engineering work and customer diagnostic reports are **not published here**.
+For questions, use the [Lemery Designs website](https://lemerydesigns.com/lemcad). Please do not post proprietary models, customer files, passwords or other confidential information in public GitHub issues.
 
-## Branding
+## Privacy
 
-The current README banner uses the **approved Option 2 visual direction**, using the approved **Precision Coral** (`#EF634F`) and **Midnight Navy** (`#17212B`) brand direction. The name still requires legal clearance before major commercial launch; SVG rendering and Windows small-icon assets should be reviewed before shipping.
+LemCAD works locally: your parts stay on your computer and are never uploaded. From version 0.1.4, LemCAD reads this repository's public release list at startup to tell you when a newer version is available; it sends nothing about you or your parts. This repository contains release notes and approved installers only.
 
 ---
 
 <div align="center">
 
-**LemCAD** · Built by Legacy · [Lemery Designs](https://lemerydesigns.com)
-
-*Custom Built. Engineered Right.*
+**LemCAD** by [Lemery Designs](https://lemerydesigns.com) · *Custom Built. Engineered Right.*
 
 </div>
