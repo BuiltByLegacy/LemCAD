@@ -112,3 +112,8 @@ Please do not share private engineering drawings, export-controlled data, confid
 <sub>LemCAD is independently developed and is not affiliated with Siemens, Autodesk, PTC, Dassault Systèmes, Bambu Lab, or OrcaSlicer.</sub>
 
 </div>
+
+
+## Planned releases
+
+See the **[LemCAD version-by-version roadmap](ROADMAP.md)** for upcoming feature-release targets, maintenance patches, and the path toward 1.0.0 and beyond. This roadmap is aspirational; only [published GitHub Releases](https://github.com/BuiltByLegacy/LemCAD/releases) identify actually downloadable builds and verified release notes.
