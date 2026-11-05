@@ -5,84 +5,110 @@
   <img alt="LemCAD by Lemery Designs" src="assets/lemcad-logo.svg" width="520">
 </picture>
 
-**Professional parametric CAD, redesigned for people who build things.**
+# Professional CAD. Rethought.
 
-[Download for Windows](https://lemerydesigns.com/lemcad) · [Releases](https://github.com/BuiltByLegacy/LemCAD/releases) · [Lemery Designs](https://lemerydesigns.com)
+**Modern, local-first parametric 3D design for engineers, makers, and manufacturers.**
+
+[**Download for Windows**](https://lemerydesigns.com/lemcad) · [Releases & checksums](https://github.com/BuiltByLegacy/LemCAD/releases) · [Give feedback](https://lemerydesigns.com/lemcad)
+
+**Windows · Early preview · Local-first**
 
 </div>
 
-> **Early preview.** LemCAD is in active development. The current Windows release is a preview, not a production-qualified CAD system. Check exported geometry in qualified software before using it for manufacturing.
+> [!IMPORTANT]
+> **LemCAD is an early preview, not production-qualified CAD.** Some tools are experimental and may produce incomplete or incorrect results. Independently validate geometry and exports in qualified software before using them for customer, safety-critical, or released manufacturing work. Release availability and exact features depend on the installer version; consult the published release notes.
 
-## What is LemCAD?
+## See LemCAD in action
 
-LemCAD is a Windows desktop parametric 3D CAD application from **Lemery Designs**. It aims to make serious mechanical design feel clear and approachable while keeping an editable feature history and engineering accuracy. Reliable geometry and file handling come before feature count.
+LemCAD is built around an editable parametric model, a graphical modeling workspace, and an engineering-oriented feature history.
 
-LemCAD is not affiliated with or endorsed by Siemens, PTC, Autodesk or Dassault Systèmes.
+**Actual application screenshots and a Sketch → Extrude → Edit demonstration are being prepared.** We will add real captures from a verified Windows build, rather than mockups that imply unfinished features already work.
 
-## What you can do in the current preview
+## Why LemCAD?
 
-| Area | What works |
+**Professional workflows, less friction.** Our goal is to make everyday mechanical design clear and precise, with discoverable commands and straightforward feature editing.
+
+**One editable engineering model.** Work with sketches, dimensional constraints, and parametric features rather than making every change as a disconnected mesh operation.
+
+**Designed to grow with making things.** The roadmap connects design to 3D printing, machining, fabrication, revisions, manufacturing instructions, and inspection.
+
+**Local-first, engineer-controlled.** The desktop application is designed to keep CAD work under your control. Optional future integrations and AI features must respect permissions and confidentiality.
+
+**Reliability before feature count.** A smaller collection of dependable commands is more valuable than a large collection of features that silently break designs.
+
+## What can you do in the current preview?
+
+These are **preview capabilities**, not independently certified production workflows. Verify behavior against the specific release you install.
+
+| Area | Available in preview / known limitations |
 | --- | --- |
-| Sketching | Lines, arcs, rectangles, circles and points on datum planes or flat faces; automatic horizontal/vertical constraints; dimensions; snapping to the sketch origin and existing points |
-| Features | Extrude, Revolve, Hole, Edge Blend and Pattern, with live preview |
-| Editing | Part Navigator with double-click to edit, suppress, roll back, rename and delete; undo and redo |
-| Files | Save and reopen LemCAD part files (`.lcad`) |
-| Export | STEP and STL |
-| Navigation | Mouse (middle button) and laptop touchpad controls, below |
+| **3D modeling workspace** | Windows desktop viewport and Part Navigator; interaction and selection are still being refined |
+| **Sketching** | Basic sketch geometry, dimensions, and early constraint workflows; not a complete professional sketch solver |
+| **Parametric features** | Early Extrude, Revolve, Hole, Edge Blend, and Pattern workflows; test edits and downstream regeneration carefully |
+| **Feature editing** | Feature-tree editing and selected undo/redo, suppression or rollback workflows; robustness is being qualified |
+| **Native files** | LemCAD part save/reopen in development; retain separate backups of important work |
+| **Interchange** | STEP and STL export paths; independently inspect exported dimensions, topology, and units |
+| **Assemblies, drawings, GD&T/PMI, simulation, CAM, PLM** | Not qualified as current production capabilities; on the roadmap |
+| **Live OrcaSlicer / Bambu Studio connection** | Planned, not part of the verified preview |
+| **AI-assisted engineering and CAD Bridge** | Planned/research, not part of the verified preview |
 
-Assemblies, drawings, GD&T/PMI, simulation and CAM are on the roadmap and are not in current builds.
+For shipped fixes and exact version-specific behavior, see the [release notes](https://github.com/BuiltByLegacy/LemCAD/releases).
 
-## Install on Windows
+## Get started on Windows
 
-1. Go to **[lemerydesigns.com/lemcad](https://lemerydesigns.com/lemcad)** and choose **Download for Windows**. It always gives you the newest stable release from this repository.
-2. Run `LemCAD-Setup-x64-<version>.exe`.
-3. The installer is not code-signed yet, so Windows may show **"Windows protected your PC"**. Choose **More info**, then **Run anyway**. Only do this for installers downloaded from the website or this repository's Releases page.
-4. Start LemCAD from the Start menu or the desktop shortcut.
+1. Visit [**lemerydesigns.com/lemcad**](https://lemerydesigns.com/lemcad) or the [public Releases page](https://github.com/BuiltByLegacy/LemCAD/releases).
+2. Choose the release appropriate for you. Check whether it is tagged **Pre-release** and read its limitations.
+3. Download the Windows installer and its release checksum file where provided. Confirm the source, filename, version, and SHA-256 before running it.
+4. Install and launch **LemCAD**. If Windows warns that a publisher is unverified, verify the file's origin and checksum and proceed only if you trust the installer; do not disable security protections indiscriminately.
+5. Begin with a disposable test part rather than proprietary or production geometry.
 
-Each release includes `SHA256SUMS.txt`. To check your download, run this in PowerShell from your Downloads folder and compare the result:
+**Windows target:** 64-bit Windows 10/11 with a functional OpenGL graphics driver. Hardware and operating-system compatibility are still being qualified.
 
-```powershell
-(Get-FileHash .\LemCAD-Setup-x64-<version>.exe).Hash
-```
+### Your first five-minute model
 
-To update, download and run the newest installer; it replaces the installed version and keeps your part files.
+1. Create a new part and open a sketch.
+2. Draw a rectangle and apply dimensions.
+3. Finish the sketch and try **Extrude**.
+4. Edit a driving dimension and inspect whether the solid regenerates correctly.
+5. Save, close, reopen, and test STEP or STL export.
 
-**Requirements:** 64-bit Windows 10 or 11 with a working OpenGL graphics driver. These are early targets, not a tested compatibility list.
+If something fails, record the exact version, steps, expected outcome, and observed behavior. Do not assume an operation succeeded solely because the viewport displays a solid.
 
-## Moving around the 3D view
+## Where we're going
 
-| With a mouse | With a laptop touchpad | Does |
+| Pillar | Direction | Status |
 | --- | --- | --- |
-| Middle-button drag | Left-drag | Rotate around the point under the cursor |
-| Shift + middle-drag | Shift + left-drag | Pan |
-| Scroll wheel, or Ctrl + middle-drag | Two-finger scroll, pinch, or Ctrl + left-drag | Zoom |
-| Middle-button double-click | View → Fit | Fit the part in the view |
+| **Professional parametric CAD** | Better constraints, robust topology, assemblies, drawings, and trustworthy regeneration | Active foundation + phased roadmap |
+| **Engineering usability** | Selection, Part Navigator, live modeling handles, diagnostic recovery, NX-familiar workflows | Active design and phased implementation |
+| **Connected manufacturing** | Print Studio, slicer links, process-specific manufacturability and engineering analysis | Planned |
+| **Engineering intelligence** | Feature Doctor, optional AI, CAD migration, design intent and revision intelligence | Planned/research |
 
-A left click selects. In sketch mode the view stays flat on the sketch; rotating comes back when you choose **Finish**.
+This is a **direction**, not a commitment to ship specific features by a particular date. Features graduate only after engineering and Windows validation.
 
-## Releases
+### A future manufacturing workflow
 
-See the [Releases page](https://github.com/BuiltByLegacy/LemCAD/releases) for every version, its release notes and checksums. The website download always points to the newest stable release; previews marked "Pre-release" are never offered there.
+Our goal is to connect an editable CAD design to a versioned manufacturing recipe, verified slicer output, and eventually inspection/production feedback. OrcaSlicer and Bambu Studio integration, load-path analysis across manufacturing methods, and revision-aware print comparisons are in the development backlog—not currently qualified capabilities.
 
-| Version | Highlights |
-| --- | --- |
-| **0.1.3** | Touchpad navigation: left-drag rotates, Shift pans, Ctrl zooms |
-| 0.1.2 | View framing after sketches and edits, exact origin snap, file dialogs open in your part's folder, Hole and Part Navigator fixes |
-| 0.1.1 | First working public preview |
-| 0.1.0 | Withdrawn: the installer could fail to start |
+## Engineering trust and privacy
 
-## Support and feedback
+LemCAD is being developed around a simple rule: **an engineering feature is not complete just because a command runs**. The validation target is creation, parameter editing, downstream regeneration, undo/redo, save/reopen, and equivalent results through desktop and headless workflows.
 
-For questions, use the [Lemery Designs website](https://lemerydesigns.com/lemcad). Please do not post proprietary models, customer files, passwords or other confidential information in public GitHub issues.
+Your CAD geometry should remain local unless you explicitly choose a supported sharing or external service. The application may check published release information for updates; consult your installed version's release notes for the precise network and privacy behavior. Avoid placing confidential customer models in public bug reports.
 
-## Privacy
+## Feedback
 
-LemCAD works locally: your parts stay on your computer and are never uploaded. From version 0.1.4, LemCAD reads this repository's public release list at startup to tell you when a newer version is available; it sends nothing about you or your parts. This repository contains release notes and approved installers only.
+LemCAD is especially interested in practical feedback from professional CAD users, makers, and small manufacturers. Tell us what you attempted, which version you used, what you expected, and what happened.
+
+[**Lemery Designs / LemCAD**](https://lemerydesigns.com/lemcad) · [**Releases and release notes**](https://github.com/BuiltByLegacy/LemCAD/releases)
+
+Please do not share private engineering drawings, export-controlled data, confidential customer CAD, credentials, or personal information in public reports.
 
 ---
 
 <div align="center">
 
 **LemCAD** by [Lemery Designs](https://lemerydesigns.com) · *Custom Built. Engineered Right.*
+
+<sub>LemCAD is independently developed and is not affiliated with Siemens, Autodesk, PTC, Dassault Systèmes, Bambu Lab, or OrcaSlicer.</sub>
 
 </div>
